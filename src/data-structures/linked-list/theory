@@ -1,0 +1,15 @@
+*Main Idea*
+A linked list is a collection of entities which are not sorted in sequential order.
+Instead, each entity has a poninter to the next entity. Each node or entity, is composed of a data and reference to the next node in sequence.
+The stucture allows for efficient insertion or removal of nodes from any position in the sequence.
+
+*Main Operation*
+- Prepend - add a node to the beginning of the list.
+- Append - add a node to the end of the list.
+- Delete - remove a node from the list.
+- Delete Tail - remove the last node from the list.
+- Delete Head - remove the first node of the list.
+- find - find a node.
+
+* Applications*
+Is a good foundation for many othe data structures like queues, stacks and hash tables.
