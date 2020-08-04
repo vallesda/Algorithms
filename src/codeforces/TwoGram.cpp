@@ -19,12 +19,27 @@ using namespace std;
 #include <list>
 #include <map>
 #include <set>
-
-#define foreach(x, v) for (typeof (v).begin() x=(v).begin(); x !=(v).end(); ++x)
-#define For(i, a, b) for (int i=(a); i<(b); ++i)
-#define D(x) cout << #x " is " << x << endl
+#include <unordered_map>
 
 int main(){
-    
+    int length = 0;
+    pair<string, int> ans = make_pair("", 0);
+    string s;
+    map<string, int> seen;
+
+    cin >> length >> s;
+
+    for (int i = 1; i < length; i++) {
+        string temp = s.substr(i - 1, 2);
+        seen[temp]++;
+
+        if (ans.second < seen[temp]) {
+            ans.second = seen[temp];
+            ans.first = temp;
+        }
+    }
+
+    cout << ans.first;
+
     return 0;
 }
